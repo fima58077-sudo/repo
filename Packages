@@ -1,0 +1,83 @@
+Package: com.myrepo.cats
+Name: Cats (коты)
+Version: 1.0
+Architecture: iphoneos-arm
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема-иконки для SnowBoard в стиле котов: 33 иконки.
+Filename: ./debs/com.myrepo.cats_1.0_iphoneos-arm.deb
+Size: 363054
+MD5sum: f1eba5f11f5a9abcdf26914c160a0ae2
+SHA1: 99cca6f592b5ff59e2a59b6beef07517a5a93452
+SHA256: ae8cc8c5ba5bfedd5d170977898a4eb88f72d71f4b31bc7ce4c5ca54a088d80d
+
+Package: com.myrepo.cats
+Name: Cats (коты)
+Version: 1.0
+Architecture: iphoneos-arm64
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема-иконки для SnowBoard в стиле котов: 33 иконки.
+Filename: ./debs/com.myrepo.cats_1.0_iphoneos-arm64.deb
+Size: 363094
+MD5sum: f8ba3de594f80c763160caed8ec42100
+SHA1: 5767788c7cae4eab9e2567b50dd4ce3c6e6edb60
+SHA256: 42d84f6c237a1f6b7daef34e694b267a3f9d1231cb2a144cf0cafe2f25153fce
+
+Package: com.myrepo.ios26
+Name: iOS 26 Liquid Glass
+Version: 1.0
+Architecture: iphoneos-arm
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема-иконки для SnowBoard в стиле iOS 26 (Liquid Glass): 123 иконки.
+Filename: ./debs/com.myrepo.ios26_1.0_iphoneos-arm.deb
+Size: 2729938
+MD5sum: 0f1177830eca86cffb0469f6f3459bb1
+SHA1: 2c4aa6b4b748d1ee0133bcfddb70c8f3da94ffe1
+SHA256: afa3e1aedcfe45397b40e88326d18809babd5d737cb8339083f4c616e1254171
+
+Package: com.myrepo.ios26
+Name: iOS 26 Liquid Glass
+Version: 1.0
+Architecture: iphoneos-arm64
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема-иконки для SnowBoard в стиле iOS 26 (Liquid Glass): 123 иконки.
+Filename: ./debs/com.myrepo.ios26_1.0_iphoneos-arm64.deb
+Size: 2729984
+MD5sum: 72bed62fb94fd663af5bd0e6dc4e1870
+SHA1: c73ef2ea6f0c092e0530f9d3f17c77b594dc0578
+SHA256: 931041f6ad4d3357b6fbc8c86d7bd7e81436937330a4d4524ed12de9bccb498f
+
+Package: com.myrepo.materialyou
+Name: Material You Expressive
+Version: 1.0
+Architecture: iphoneos-arm
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема для SnowBoard в стиле Material You Expressive: 200 иконок приложений и иконки внутри Настроек.
+Filename: ./debs/com.myrepo.materialyou_1.0_iphoneos-arm.deb
+Size: 2519416
+MD5sum: 1a8053f100cc96157b75e90b7267e921
+SHA1: 4939c1d15c63e9c185b72ccad432575d623f2651
+SHA256: 568da5ec06ba8be5c97701bc3eba112c58a68b5d81138a54bab3651f82ae0b5e
+
+Package: com.myrepo.materialyou
+Name: Material You Expressive
+Version: 1.0
+Architecture: iphoneos-arm64
+Section: Themes (SnowBoard)
+Maintainer: Me <me@example.com>
+Author: Me <me@example.com>
+Description: Тема для SnowBoard в стиле Material You Expressive: 200 иконок приложений и иконки внутри Настроек.
+Filename: ./debs/com.myrepo.materialyou_1.0_iphoneos-arm64.deb
+Size: 2519846
+MD5sum: 0f304d5e6fa4e63e30c8e9069b3ef698
+SHA1: 1034000ff7fca8ea66d67f1fe5f6dbe5f405fdfd
+SHA256: ed375708234e7a814eb7cbeb5f524b04344a60329441f3a5d8c1e63e5eadd0bc

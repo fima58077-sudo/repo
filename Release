@@ -1,0 +1,20 @@
+Origin: Моя тема-репа
+Label: Моя тема-репа
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: Темы для SnowBoard: Cats, Material You, iOS 26
+MD5Sum:
+ 4caee37b53e95c62e6d1c1d2bc25c344 3225 Packages
+ 8ecf371e6053db19078b18fa0a5e876e 1050 Packages.gz
+ 615fbca1553710c8e9bb2a077469f0d1 1189 Packages.bz2
+SHA1:
+ f3268f00d1866bc72189607491df5237d7664592 3225 Packages
+ 301ac081b5748143018071c7e4ea6a5ec74e7a74 1050 Packages.gz
+ 366c3edea24c8da4215b5c0f6aa49efd06554a2d 1189 Packages.bz2
+SHA256:
+ 2902ea6832ce2ccc9abf5048ebca28fddca2b83e507dacef9a04caef80168e32 3225 Packages
+ 76dbd30929a17aab4d17203c449a1a8c445b92f6e8e079b9672401efcc0db854 1050 Packages.gz
+ d75a68460ff1a909df1e95ed30622e4819710b16c268cfdcc3916c74dd74e3ad 1189 Packages.bz2
