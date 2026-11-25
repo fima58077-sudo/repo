@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>fima58077 Repo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, #1b2838 0%, #0f1620 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 26px 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      margin-bottom: 18px;
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      margin: 0 auto 14px;
+      object-fit: cover;
+      background: #2c3e50;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    p.desc {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.72);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
+      margin-bottom: 10px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, opacity 0.15s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      opacity: 0.85;
+    }
+
+    .btn-sileo {
+      background: linear-gradient(135deg, #2cc1b5 0%, #1c8f9e 100%);
+    }
+
+    .btn-zebra {
+      background: linear-gradient(135deg, #3a3d42 0%, #232528 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-copy {
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .url-box {
+      margin-top: 16px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      word-break: break-all;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 4px 4px 12px;
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge-hint {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .pkg-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pkg-item {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 18px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .pkg-info {
+      text-align: left;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pkg-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pkg-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .tag {
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .tag-rootless {
+      background: rgba(44, 193, 181, 0.2);
+      color: #5eead4;
+    }
+
+    .tag-rootful {
+      background: rgba(251, 191, 36, 0.18);
+      color: #fcd34d;
+    }
+
+    .btn-dl {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background 0.15s ease, transform 0.12s ease;
+    }
+
+    .btn-dl:active {
+      transform: scale(0.95);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .status-msg {
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Карточка добавления репозитория -->
+    <div class="card">
+      <img src="./CydiaIcon.png" alt="Repo Icon" class="icon" onerror="this.style.display='none'" />
+      <h1>fima58077 Repo</h1>
+      <p class="desc">Темы и пакеты для Sileo и Zebra<br>(Rootless &amp; Rootful)</p>
+
+      <a class="btn btn-sileo" href="sileo://source/https://github.io">
+        Добавить в Sileo
+      </a>
+
+      <a class="btn btn-zebra" href="zbra://sources/add/https://github.io">
+        Добавить в Zebra
+      </a>
+
+      <button class="btn btn-copy" id="copyBtn" onclick="copyRepo()">
+        Скопировать ссылку
+      </button>
+
+      <div class="url-box" id="repoUrl">https://github.io</div>
+    </div>
+
+    <!-- Список пакетов для прямого скачивания .deb -->
+    <div class="section-title">
+      <span>Скачать .deb напрямую</span>
+      <span class="badge-hint">Для Dopamine — arm64</span>
+    </div>
+
+    <div class="pkg-list" id="pkgList">
+      <div class="status-msg">Загрузка списка пакетов из Packages...</div>
+    </div>
+  </div>
+
+  <script>
+    function copyRepo() {
+      const url = document.getElementById('repoUrl').innerText;
+      const btn = document.getElementById('copyBtn');
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(() => showCopied(btn));
+      } else {
+        const input = document.createElement('textarea');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        showCopied(btn);
+      }
+    }
+
+    function showCopied(btn) {
+      const oldText = btn.innerText;
+      btn.innerText = 'Ссылка скопирована ✓';
+      setTimeout(() => {
+        btn.innerText = oldText;
+      }, 2000);
+    }
+
+    // Автоматический парсинг файла Packages из корня репозитория
+    async function loadPackages() {
+      const listEl = document.getElementById('pkgList');
+      try {
+        const res = await fetch('./Packages?t=' + Date.now());
+        if (!res.ok) throw new Error('Не удалось загрузить Packages');
+        const text = await res.text();
+
+        const blocks = text.trim().split(/\n\s*\n/);
+        const packages = [];
+
+        for (const block of blocks) {
+          const pkg = {};
+          block.split('\n').forEach(line => {
+            const idx = line.indexOf(':');
+            if (idx > 0) {
+              const key = line.slice(0, idx).trim();
+              const val = line.slice(idx + 1).trim();
+              pkg[key] = val;
+            }
+          });
+          if (pkg.Filename) {
+            packages.push(pkg);
+          }
+        }
+
+        if (packages.length === 0) {
+          listEl.innerHTML = '<div class="status-msg">Пакеты в файле Packages не найдены</div>';
+          return;
+        }
+
+        listEl.innerHTML = '';
+        packages.forEach(pkg => {
+          const name = pkg.Name || pkg.Package || pkg.Filename.split('/').pop();
+          const version = pkg.Version ? `v${pkg.Version}` : '';
+          const arch = pkg.Architecture || '';
+          const isRootless = arch === 'iphoneos-arm64';
+          const tagClass = isRootless ? 'tag-rootless' : 'tag-rootful';
+          const tagLabel = isRootless ? 'Rootless (arm64)' : 'Rootful (arm)';
+
+          const item = document.createElement('div');
+          item.className = 'pkg-item';
+          item.innerHTML = `
+            <div class="pkg-info">
+              <div class="pkg-name">${escapeHtml(name)}</div>
+              <div class="pkg-meta">
+                <span class="tag ${tagClass}">${tagLabel}</span>
+                <span>${escapeHtml(version)}</span>
+              </div>
+            </div>
+            <a class="btn-dl" href="${encodeURI(pkg.Filename)}" download>Скачать .deb</a>
+          `;
+          listEl.appendChild(item);
+        });
+      } catch (e) {
+        listEl.innerHTML = '<div class="status-msg">Не удалось прочитать файл Packages. Проверь, что GitHub Pages запущен.</div>';
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    }
+
+    loadPackages();
+  </script>
+
+</body>
+  </html>
